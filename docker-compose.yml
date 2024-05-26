@@ -118,6 +118,13 @@ services:
     image: phpmyadmin/phpmyadmin
     ports:
       - "8001:80"
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_USER: homestead
+      PMA_PASSWORD: secret
+    networks:
+      - php
 
 
     
