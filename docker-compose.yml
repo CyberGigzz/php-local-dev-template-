@@ -19,6 +19,7 @@ services:
       - redis
       - mysql
       - mailhog
+      - phpmyadmin
     networks:
       - php
 
@@ -112,5 +113,11 @@ services:
       - "8025:8025"
     networks:
       - php
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8001:80"
+
 
     
